@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+  <p><a href="{{ url_for('index') }}">Home</a></p>
+  <h2>{{ note.name }}</h2>
+  <div>
+    {{ note.text() }}
+  </div>
+{% endblock %}
