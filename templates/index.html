@@ -1,24 +1,52 @@
 {% extends "base.html" %}
 {% block content %}
-  <form method="get" action="">
-    Search term:
-    <input type="text" name="search" value="{{ search_term }}">
-    <button type="submit">Search</button>
-  </form>
-  
-  <h3>All notes {% if search_term %}(filtered for "{{search_term}}"){% endif %}</h3>
-  <ul>
-    {% for n in notes %}
-      <li><a href="{{ url_for('show_note', name=n) }}">{{n}}</a></li>
-    {% endfor %}
-  </ul>
-  
-  <hr/>
-  
-  <h3>Add a new note</h3>
-  <form method="post" action="{{ url_for('add_note') }}">
-    <p><input type="text" name="name" placeholder="Note name"></p>
-    <p><textarea name="content" placeholder="Note content"></textarea></p>
-    <button type="submit">Add note</button>
-  </form>
+<div class="row">
+  <div class="col-md-8 mx-auto">
+    <!-- Search Box -->
+    <form method="get" action="" class="mb-3 d-flex">
+      <input
+        class="form-control me-2"
+        type="text"
+        name="search"
+        value="{{ search }}"
+        placeholder="Search term..."
+      >
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <h4 class="text-secondary mb-3">
+      {% if search %}
+        Notes matching "{{ search }}"
+      {% else %}
+        All notes
+      {% endif %}
+    </h4>
+
+    <!-- List of Notes -->
+    <ul class="list-group mb-4">
+      {% for n in notes %}
+        <li class="list-group-item">
+          <a href="{{ url_for('show_note', name=n) }}" class="text-decoration-none">
+            {{ n }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <!-- Add New Note Form -->
+    <h4>Add a new note</h4>
+    <form method="post" action="{{ url_for('add_note') }}" class="mb-4">
+      <div class="mb-3">
+        <label for="name" class="form-label">Note Title</label>
+        <input type="text" class="form-control" name="name" placeholder="Note name">
+      </div>
+      <div class="mb-3">
+        <label for="content" class="form-label">Note Content</label>
+        <textarea class="form-control" name="content" rows="3" placeholder="Enter note content"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Add note</button>
+    </form>
+  </div>
+</div>
 {% endblock %}
+

@@ -1,18 +1,99 @@
+/* style.css */
+
 body {
-    font-family: sans-serif;
-    margin: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #F9F9FB;
+  color: #333333;
 }
-h1 {
-    color: #2a4d69;
+
+.navbar-brand {
+  font-size: 1.4rem;
 }
+
+.container {
+  max-width: 800px;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #8e8e93; /* iOS-like grey button */
+  color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* Form elements */
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #CED4DA;
+  background-color: #FFFFFF;
+}
+
+/* List group items */
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #ECECEC;
+  padding: 12px 15px;
+}
+
+/* Links */
 a {
-    color: #2a4d69;
-    text-decoration: none;
+  color: var(--accent-color);
+  text-decoration: none;
 }
+
 a:hover {
-    text-decoration: underline;
+  color: var(--accent-color);
+  text-decoration: underline;
 }
-textarea {
-    width: 300px;
-    height: 80px;
+
+/* Card-like container (optional usage) */
+.card {
+  background-color: #FFFFFF;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ECECEC;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 5%);
+}
+
+/* Headings */
+h2, h3, h4 {
+  font-weight: 600;
+}
+
+/* Utility classes */
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+.my-5 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+.fw-bold {
+  font-weight: 600 !important;
 }

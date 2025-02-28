@@ -1,9 +1,35 @@
+#stream.py
+
 import streamlit as st
 from notes import NoteBook
 
 nb = NoteBook('data')
 
-st.title("NoteBook")
+# st.title("NoteBook")
+
+st.set_page_config(page_title="NoteBook", layout="wide")
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background-color: #F5F7FA;
+    }
+    .stButton>button {
+        background-color: #3366FF;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5em 1em;
+    }
+    .stButton>button:hover {
+        background-color: #254eda;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+header = st.title("NoteBook")
 
 tab1, tab2 = st.tabs(["Show note", "Add note"])
 
