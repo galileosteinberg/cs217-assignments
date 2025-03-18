@@ -12,7 +12,7 @@ This is a simple note-taking web application built with Flask and SQLAlchemy for
 
 ## Requirements
 
-- Python 3.6+
+- Python
 - Flask
 - Flask-SQLAlchemy
 
@@ -35,6 +35,7 @@ All required dependencies are listed in `requirements.txt`.
 
 Simply run:
 ```bash
+
 python run.py
 ```
 
@@ -56,6 +57,7 @@ This will start the Flask development server, and the application will be access
   - `note.html` - Note detail page with comments
 - `run.py` - Application entry point
 - `requirements.txt` - Python dependencies
+- `README.md` - README file with project details
 
 ## Database Schema
 
