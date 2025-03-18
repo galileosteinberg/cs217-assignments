@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+  <div class="col-md-8 mx-auto">
+    <!-- Search Box -->
+    <form method="get" action="" class="mb-3 d-flex">
+      <input
+        class="form-control me-2"
+        type="text"
+        name="search"
+        value="{{ search_term }}"
+        placeholder="Search term..."
+      >
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <h4 class="text-secondary mb-3">
+      {% if search_term %}
+        Notes matching "{{ search_term }}"
+      {% else %}
+        All notes
+      {% endif %}
+    </h4>
+
+    <!-- List of Notes -->
+    <ul class="list-group mb-4">
+      {% for n in notes %}
+        <li class="list-group-item">
+          <a href="{{ url_for('main.show_note', name=n) }}" class="text-decoration-none">
+            {{ n }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <!-- Add New Note Form -->
+    <h4>Add a new note</h4>
+    <form method="post" action="{{ url_for('main.add_note') }}" class="mb-4">
+      <div class="mb-3">
+        <label for="name" class="form-label">Note Title</label>
+        <input type="text" class="form-control" name="name" placeholder="Note name" required>
+      </div>
+      <div class="mb-3">
+        <label for="content" class="form-label">Note Content</label>
+        <textarea class="form-control" name="content" rows="3" placeholder="Enter note content" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Add note</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
