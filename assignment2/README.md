@@ -40,6 +40,7 @@ python run.py
 ```
 
 This will start the Flask development server, and the application will be accessible at `http://127.0.0.1:5000/`.
+Once the application has started, the instance directory containing `db.sqlite` will be created automatically.
 
 ## Application Structure
 
