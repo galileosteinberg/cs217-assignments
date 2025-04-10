@@ -1,0 +1,99 @@
+/* style.css */
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #F9F9FB;
+  color: #333333;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+}
+
+.container {
+  max-width: 800px;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #8e8e93; /* iOS-like grey button */
+  color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background-color: #ff3b30; /* iOS-like red button */
+  color: #FFFFFF;
+}
+
+.btn-danger:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* Form elements */
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #CED4DA;
+  background-color: #FFFFFF;
+}
+
+/* List group items */
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #ECECEC;
+  padding: 12px 15px;
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Card-like container */
+.card {
+  background-color: #FFFFFF;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ECECEC;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 5%);
+}
+
+/* Headings */
+h2, h3, h4 {
+  font-weight: 600;
+}
+
+/* Comment form transition */
+#comment-form {
+  transition: all 0.3s ease-in-out;
+}
