@@ -2,3 +2,6 @@ code/
 instance/
 __pycache__/
 venv/
+.idea/
+.DS_Store
+instance/db.sqlite
