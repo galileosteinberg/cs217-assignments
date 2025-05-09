@@ -43,6 +43,18 @@ This will start the Flask development server, and the application will be access
 
 Once the application has started, the `instance/` directory containing `db.sqlite` will be created automatically.
 
+## Running with Docker
+
+### Build the image
+```bash
+docker build -t notebook-app .
+
+docker run -d -p 8000:5000 -v $(pwd)/instance:/app/instance --name notebook notebook-app
+
+
+```
+Point browser at: http://127.0.0.1:8000/
+
 ## Application Structure
 
 - `notebook/` - Main application package
