@@ -1,4 +1,4 @@
-# NoteBook Application - Assignment 2
+# NoteBook Application - Assignment 3
 
 This is a simple note-taking web application built with Flask and SQLAlchemy for COSI-217.
 
